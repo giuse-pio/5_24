@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-void elimina(int v[], int n, int i);
+void elimina(int v[], int n, int i) {
+    for (int j = i; j < n; j++) {
+        v[j] = v[j + 1];
+    }
+}
 
 int main(void) {
     int n = 5;
@@ -48,8 +52,4 @@ int main(void) {
     return 0;
 }
 
-void elimina(int v[], int n, int i) {
-    for (int j = i; j < n; j++) {
-        v[j] = v[j + 1];
-    }
-}
+
